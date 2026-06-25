@@ -1,0 +1,80 @@
+:root {
+  --bg: #15202b;
+  --panel: #1e2732;
+  --text: #e7e9ea;
+  --muted: #8b98a5;
+  --accent: #1d9bf0;
+  --accent-hover: #1a8cd8;
+  --border: #2f3b47;
+  --ok: #00ba7c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.wrap { max-width: 640px; margin: 0 auto; padding: 32px 24px 60px; }
+h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 8px; }
+.lead { color: var(--muted); margin: 0 0 24px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+}
+.card.subtle { background: transparent; }
+h2 { font-size: 16px; margin: 0 0 14px; }
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 14px 0 6px;
+}
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 14px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+input:focus { outline: none; border-color: var(--accent); }
+.help { font-size: 12px; color: var(--muted); margin: 6px 0 0; }
+.help a { color: var(--accent); }
+.db-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+.btn {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--panel);
+  color: var(--text);
+}
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-ghost { background: transparent; white-space: nowrap; }
+.actions { display: flex; align-items: center; gap: 14px; margin-top: 22px; }
+.saved { color: var(--ok); font-size: 13px; font-weight: 600; }
+code {
+  background: var(--bg);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+ul { margin: 0; padding-left: 20px; color: var(--muted); }
+.hidden { display: none !important; }

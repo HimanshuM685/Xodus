@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xodus — Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Xodus Settings</h1>
+      <p class="lead">
+        Xodus pushes bookmarks to <strong>your own</strong> Notion workspace
+        using an integration token you create. Nothing is sent anywhere else —
+        no servers, no analytics. Tokens live only in this browser’s extension
+        storage.
+      </p>
+
+      <section class="card">
+        <h2>Notion connection</h2>
+
+        <label for="token">Internal integration token</label>
+        <input
+          id="token"
+          type="password"
+          placeholder="ntn_… or secret_…"
+          autocomplete="off"
+        />
+        <p class="help">
+          Create one at
+          <a href="https://www.notion.so/my-integrations" target="_blank"
+            >notion.so/my-integrations</a
+          >. Then open the Notion page you want to use, click ••• → Connections,
+          and connect your integration so Xodus can write to it.
+        </p>
+
+        <label for="parent">Parent page ID</label>
+        <input id="parent" type="text" placeholder="32-char id from the page URL" />
+        <p class="help">
+          The page (shared with your integration) under which Xodus creates its
+          database. Copy the page link — the ID is the 32-character hex chunk at
+          the end (dashes optional).
+        </p>
+
+        <div class="db-row">
+          <div>
+            <label>Saved database</label>
+            <p class="help" id="db-display">No database created yet.</p>
+          </div>
+          <button id="reset-db" class="btn btn-ghost" type="button">
+            Forget database
+          </button>
+        </div>
+        <p class="help">
+          Once Xodus creates its database, the ID is stored here so future
+          pushes append to it instead of making duplicates. “Forget database”
+          makes the next push create a fresh one.
+        </p>
+
+        <div class="actions">
+          <button id="save" class="btn btn-primary" type="button">Save</button>
+          <span id="saved" class="saved hidden">Saved ✓</span>
+        </div>
+      </section>
+
+      <section class="card subtle">
+        <h2>Privacy</h2>
+        <ul>
+          <li>All bookmark collection happens locally in your browser.</li>
+          <li>The only outbound requests are to <code>api.notion.com</code> with your token.</li>
+          <li>No telemetry, no backend, no third parties.</li>
+        </ul>
+      </section>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

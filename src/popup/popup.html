@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>Xodus</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="brand">Xodus</h1>
+      <span class="tagline">X bookmarks → CSV · Markdown · Notion</span>
+    </header>
+
+    <!-- Banner for environment problems (not on X, not on bookmarks page) -->
+    <div id="banner" class="banner hidden"></div>
+
+    <section class="stat">
+      <div class="stat-count"><span id="count">0</span></div>
+      <div class="stat-label">bookmarks collected</div>
+      <div id="state" class="stat-state">idle</div>
+    </section>
+
+    <section class="collect">
+      <button id="collect" class="btn btn-primary">Collect bookmarks</button>
+      <button id="stop" class="btn btn-secondary hidden">Stop</button>
+      <p class="hint" id="collect-hint">
+        Open <strong>x.com/i/bookmarks</strong>, then press Collect. Xodus
+        auto-scrolls and captures each batch your browser loads.
+      </p>
+    </section>
+
+    <section class="exports">
+      <button id="csv" class="btn">Download CSV</button>
+      <button id="markdown" class="btn">Copy as Markdown</button>
+      <button id="notion" class="btn">Push to Notion</button>
+      <div id="notion-status" class="notion-status hidden"></div>
+    </section>
+
+    <footer class="footer">
+      <button id="clear" class="link-btn">Clear collected data</button>
+      <button id="settings" class="link-btn">Settings</button>
+    </footer>
+
+    <p id="toast" class="toast hidden"></p>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
