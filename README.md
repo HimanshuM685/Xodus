@@ -34,6 +34,65 @@ is gated behind paid API tiers. Xodus deliberately avoids that.
 
 ---
 
+## 🚀 How to run Xodus (start here)
+
+There's no app to install from a store and **no build step** — Xodus is just a
+folder of files you load into your browser. From zero to your first export takes
+about two minutes. Here's the whole thing in plain English:
+
+**1. Get the code onto your computer.**
+Download this repository (green **Code → Download ZIP** button on GitHub, then
+unzip it) or, if you use git:
+
+```bash
+git clone https://github.com/<your-username>/Xodus.git
+```
+
+Remember where the folder lives — you'll point your browser at it in the next
+step. The important thing is that the folder contains a file called
+`manifest.json`.
+
+**2. Load it into Chrome or Edge.**
+   1. Open a new tab and go to `chrome://extensions` (or `edge://extensions`).
+   2. Turn on **Developer mode** using the switch in the top-right corner.
+   3. Click **Load unpacked**.
+   4. Select the Xodus folder (the one with `manifest.json` inside it).
+   5. Xodus now appears in your extensions list. Click the puzzle-piece icon in
+      your toolbar and **pin** it so it's always one click away.
+
+   > You need Chrome or Edge version **111 or newer** (released 2023). Almost any
+   > up-to-date browser qualifies. Firefox and Safari aren't supported.
+
+**3. Open your bookmarks on X.**
+Go to **[x.com/i/bookmarks](https://x.com/i/bookmarks)** and make sure you're
+logged in. This is the only page Xodus reads — it watches the bookmark data your
+own browser loads as you scroll.
+
+**4. Collect.**
+Click the **Xodus** icon, then **Collect bookmarks**. Xodus scrolls the page for
+you and counts bookmarks as they load. Leave the tab in the foreground and let it
+work — it stops on its own when there's nothing left, or you can hit **Stop**
+anytime. You can close the popup and come back later; your progress is saved.
+
+**5. Export however you like.**
+Open the Xodus popup again and pick one:
+   - **Download CSV** — a spreadsheet file. Works everywhere; open it in Excel,
+     Numbers, or import it into Google Sheets. This is the safe, always-works
+     option.
+   - **Copy as Markdown** — copies a tidy bulleted list to your clipboard, ready
+     to paste into notes, a blog, or anywhere that takes Markdown.
+   - **Push to Notion** — sends everything into a Notion database. This one needs
+     a quick one-time setup (your Notion token + a page to put it in) — see
+     [Push to Notion](#3-push-to-notion) below.
+
+That's it. The sections below go deeper on each step if you want the details.
+
+**If nothing happens / the count stays at 0:** X probably changed its website.
+That's expected from time to time — see the **Disclaimer** above and
+[CONTRIBUTING.md](CONTRIBUTING.md) for how it gets fixed.
+
+---
+
 ## Install (load unpacked)
 
 1. Clone or download this repository.
